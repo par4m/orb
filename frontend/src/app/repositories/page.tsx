@@ -38,7 +38,8 @@ export default function RepositoriesPage() {
       try {
         setIsLoading(true);
         // You can replace with your actual API URL
-        const API_URL = 'http://localhost:8000';
+        const API_URL = process.env.NEXT_PUBLIC_API_URL; // Use the environment variable
+
         
         // Fetch repositories
         const reposResponse = await fetch(`${API_URL}/api/repositories/`);
